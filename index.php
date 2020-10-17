@@ -5,6 +5,7 @@
 		<div id="content-area" class="clearfix">
 			<div id="left-area">
 		<?php
+		// simple comment to test our continues integration
 			if ( have_posts() ) :
 				while ( have_posts() ) : the_post();
 					$post_format = et_pb_post_format(); ?>
