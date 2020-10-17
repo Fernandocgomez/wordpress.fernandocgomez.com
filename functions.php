@@ -7228,10 +7228,3 @@ function et_divi_disable_theme_builder_header_footer_on_blank_template( $layouts
 add_filter( 'et_theme_builder_template_layouts', 'et_divi_disable_theme_builder_header_footer_on_blank_template' );
 
 add_filter('use_block_editor_for_post', '__return_false');
-
-add_filter('upload_mimes', 'add_custom_upload_mimes');
-function add_custom_upload_mimes($existing_mimes) {
-	$existing_mimes['ttf'] = 'application/x-font-ttf';
-	$existing_mimes['svg'] = 'image/svg+xml';
-	return $existing_mimes;
-}
