@@ -6,6 +6,7 @@
 			<div id="left-area">
 		<?php
 			if ( have_posts() ) :
+				// comments
 				while ( have_posts() ) : the_post();
 					$post_format = et_pb_post_format(); ?>
 
