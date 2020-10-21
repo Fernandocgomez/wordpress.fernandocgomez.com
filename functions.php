@@ -7228,3 +7228,15 @@ function et_divi_disable_theme_builder_header_footer_on_blank_template( $layouts
 add_filter( 'et_theme_builder_template_layouts', 'et_divi_disable_theme_builder_header_footer_on_blank_template' );
 
 add_filter('use_block_editor_for_post', '__return_false');
+
+/**
+ * inject a script tag to the head
+ *
+ *
+ * @return void
+ */
+function inject_js_scripts() {
+	echo '<script src="https://kit.fontawesome.com/c1f8661757.js" crossorigin="anonymous"></script>';
+}
+
+add_action('wp_head', 'inject_js_scripts');
