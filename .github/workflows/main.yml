@@ -11,6 +11,6 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        ftp-server: ftp://fernandocgomez.com/fernandocgomez.com/public_html/wp-content/themes/Divi-fernandocgomez
+        ftp-server: ftp://fernandocgomez.com/dev.fernandocgomez.com/public_html/wp-content/themes/Divi-fernandocgomez
         ftp-username: fernando@fernandocgomez.com
         ftp-password: ${{ secrets.FTP_PASSWORD }}
