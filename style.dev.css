@@ -19957,3 +19957,10 @@ a.big-button, a.small-button, a.icon-button {
 .clear {
   clear: both; }
 
+#sitemap label {
+  background-color: #283149 !important;
+}
+
+#sitemap .simple-sitemap-wrap.simple-sitemap-tab-1.panel, #sitemap .simple-sitemap-wrap.simple-sitemap-tab-2.panel {
+  border-top: 4px solid #283149 !important;
+}
