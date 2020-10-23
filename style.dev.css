@@ -19956,12 +19956,3 @@ a.big-button, a.small-button, a.icon-button {
 
 .clear {
   clear: both; }
-
-
-#sitemap .simple-sitemap-wrap.simple-sitemap-tab-1.panel, #sitemap .simple-sitemap-wrap.simple-sitemap-tab-2.panel {
-  border-top: 4px solid #283149 !important;
-}
-
-.simple-sitemap-container-5f9285e9200a9.tab-enabled input:checked + label {
-  background-color: #283149 !important;
-}
