@@ -7230,16 +7230,30 @@ add_filter( 'et_theme_builder_template_layouts', 'et_divi_disable_theme_builder_
 add_filter('use_block_editor_for_post', '__return_false');
 
 /**
- * inject a script tag to the head
+ * inject font awesome dependency
  *
  *
  * @return void
  */
-function inject_js_scripts() {
+function inject_fontawesome() {
 	echo '<script src="https://kit.fontawesome.com/c1f8661757.js" crossorigin="anonymous"></script>';
 }
 
-add_action('wp_head', 'inject_js_scripts');
+add_action('wp_head', 'inject_fontawesome');
+
+/**
+ * inject jquery 2.2.4
+ *
+ *
+ * @return void
+ */
+function inject_jquery() {
+	wp_deregister_script('jquery');
+	
+	wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-2.2.4.min.js', array(), null, true);
+}
+
+add_action('wp_enqueue_scripts', 'inject_jquery');
 
 /**
  * inject custom scripts to the html head
@@ -7249,7 +7263,7 @@ add_action('wp_head', 'inject_js_scripts');
  */
 function load_my_js_scripts(){
 	wp_register_script('custom_js', get_stylesheet_directory_uri() . '/js/myScripts.js', array( 'jquery' ),'2.2.4',true);
-
+	
 	wp_enqueue_script('custom_js');
 }
 
