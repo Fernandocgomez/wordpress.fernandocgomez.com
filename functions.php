@@ -7240,3 +7240,17 @@ function inject_js_scripts() {
 }
 
 add_action('wp_head', 'inject_js_scripts');
+
+/**
+ * inject custom scripts to the html head
+ *
+ *
+ * @return void
+ */
+function load_my_js_scripts(){
+	wp_register_script('custom_js', get_stylesheet_directory_uri() . '/js/myScripts.js', array( 'jquery' ),'2.2.4',true);
+
+	wp_enqueue_script('custom_js');
+}
+
+add_action( 'wp_enqueue_scripts', 'load_my_js_scripts' );
