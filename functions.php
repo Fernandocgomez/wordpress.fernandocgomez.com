@@ -7256,7 +7256,7 @@ function inject_jquery() {
 add_action('wp_enqueue_scripts', 'inject_jquery');
 
 /**
- * inject custom scripts to the html head
+ * inject custom scripts
  *
  *
  * @return void
